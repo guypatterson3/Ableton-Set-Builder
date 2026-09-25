@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ableton Set Builder is a tool in development for preparing Ableton Live sets from Planning Center Services plans, with read-only access to Planning Center data.">
+  <meta name="color-scheme" content="light">
+  <title>Ableton Set Builder — About &amp; Privacy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <span class="name">Ableton Set Builder</span>
+      <span class="status">In development</span>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="title">
+        <p class="eyebrow">Planning Center Services + Ableton Live</p>
+        <h1>From service plan<br>to Ableton set.</h1>
+        <p class="lead">A local set-building tool that uses selected Planning Center Services plan information to help prepare and organize Ableton Live sets.</p>
+        <p class="development">Currently in development. Features and workflows may change before a public release.</p>
+      </section>
+      <section class="privacy" aria-labelledby="privacy-title">
+        <div class="section-heading">
+          <h2 id="privacy-title">Privacy &amp; security</h2>
+          <p>The current development integration is designed around limited access and local processing.</p>
+        </div>
+        <dl>
+          <div>
+            <dt>Services only</dt>
+            <dd>The integration requests only the Planning Center Services OAuth scope (<code>services</code>). It does not request access to other Planning Center products.</dd>
+          </div>
+          <div>
+            <dt>Read-only behavior</dt>
+            <dd>The app enforces GET-only access to permitted Services resources. It does not create, edit, or delete Planning Center data. This restriction is enforced by the app; the Services scope itself is not a read-only permission. OAuth token exchange is separate from resource access.</dd>
+          </div>
+          <div>
+            <dt>Temporary authorization</dt>
+            <dd>Sign-in happens with Planning Center through OAuth with PKCE. The app does not collect your Planning Center password or use a client secret. Authorization codes and tokens are handled transiently by the local OAuth helper; they are not intentionally persisted to disk, included in saved plan exports, or exposed by this webpage.</dd>
+          </div>
+          <div>
+            <dt>You choose what to save</dt>
+            <dd>Selected plan information is processed locally. Saving a plan export requires a separate confirmation in the local tool. That export contains plan information, not OAuth credentials.</dd>
+          </div>
+        </dl>
+        <p class="site-note">This informational page has no sign-in, forms, analytics, cookies, or third-party scripts. It does not connect to Planning Center or receive your plan data or tokens. The hosting provider may process standard request logs when you visit.</p>
+      </section>
+    </main>
+    <footer>
+      <p>An independent project. Not affiliated with or endorsed by Ableton or Planning Center.</p>
+    </footer>
+  </div>
+</body>
+</html>
